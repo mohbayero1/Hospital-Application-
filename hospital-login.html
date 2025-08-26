@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Login & Appointments</title>
+  <link rel="stylesheet" href="hospital-login.css" />
+</head>
+<body>
+
+<!-- REGISTRATION SCREEN -->
+<section id="registerScreen" style="display:none;">
+  <h2>📝 Register</h2>
+  <form id="registerForm">
+    <input type="text" id="regUsername" placeholder="Choose Username" required />
+    <input type="password" id="regPassword" placeholder="Choose Password" required />
+    <select id="regRole" required>
+      <option value="">Select Role</option>
+      <option value="admin">Admin</option>
+      <option value="doctor">Doctor</option>
+    </select>
+    <button type="submit">Create Account</button>
+    <p id="registerError" style="color:red;"></p>
+  </form>
+  <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+</section>
+
+<!-- Existing login section -->
+<section id="loginScreen">
+  <h2>🔐 Login</h2>
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+  </form>
+  <p id="loginError" style="color:red;"></p>
+  <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+</section>
+
+  <!-- MAIN DASHBOARD -->
+  <section id="dashboard" style="display:none;">
+    <header>
+      <h1>🏥 Doctor Appointment Dashboard</h1>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <section class="doctor-section">
+      <h2>Available Doctors</h2>
+      <ul id="doctorList"></ul>
+    </section>
+
+    <section class="appointment-section">
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm">
+        <input type="text" id="patientName" placeholder="Patient Name" required />
+        <select id="doctorSelect" required>
+          <option value="">Select a Doctor</option>
+        </select>
+        <input type="date" id="appointmentDate" required />
+        <button type="submit">Book Appointment</button>
+      </form>
+    </section>
+
+    <section class="appointment-list">
+      <h2>Scheduled Appointments</h2>
+      <ul id="appointmentList"></ul>
+    </section>
+  </section>
+
+  <script src="hospital-login.js"></script>
+</body>
+</html>

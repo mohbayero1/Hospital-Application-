@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Application</title>
+  <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+  <div class="row">
+  <img src="https://www.shutterstock.com/image-photo/closeup-patients-arm-iv-drip-260nw-2476792285.jpg">
+  </div>
+  
+  <header>
+    <i class=""></i>
+    <h1>🏥 AL- WIFAQ </h1>
+    <p class="spann">ALMAJIRI HEALTH CARE</p> 
+  </header>
+
+  <section class="form-section">
+    <h2>Patient Registration</h2>
+    <form id="patientForm">
+      <input type="text" id="name" placeholder="Full Name" required/>
+      <input type="text" id="age" placeholder="Age" required/>
+      <input type="text" placeholder="Center" required>
+      <input type="number" placeholder="Phone Number" required>
+      <input type="text" id="symptoms" placeholder="Symptoms" required/>
+      <button type="submit">Register</button>
+      </form>
+  </section>
+<header>
+  <h1 class="head">Doctor Appointment Booking</h1>
+  </header>
+  <section class="doctor-section">
+  <h2>Available Doctors</h2>
+  <ul id="doctorList">
+     <!-- Doctor list populated by JavaScript -->
+  </ul>
+  </section>
+ 
+  <section class="appointment-section">
+    <h2>Book an Appointment</h2>
+    <form id="appointmentForm">
+      <input type="text" id="patientName" placeholder="Your Name" required/>
+      <select id="doctorSelect" required>
+        <option value="">Select a Doctor</option>
+      </select>
+      <input type="date" id="appointmentDate" required/>
+      <button type="submit">Book Appointment</button>
+    </form>
+  </section>
+
+  <section class="appointment-list">
+    <h2>Scheduled Appointments</h2>
+    <ul id="appointmentList">
+      <!-- Appointments will be listed here -->
+    </ul>
+  </section>
+
+  <script src="hospital.js"></script>
+</body>
+</html>
